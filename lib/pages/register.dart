@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newa/pages/login.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -88,7 +89,9 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget _registerBtn() {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+
+      },
       child: const SizedBox(
         width: double.infinity,
         child: Text(
@@ -108,7 +111,12 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget _toLoginPageText() {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LoginPage()),
+        );
+      },
       child: Text(
         "Already have an account?",
         textAlign: TextAlign.center,

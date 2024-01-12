@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newa/pages/register.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -98,7 +99,12 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _toRegisterPageText() {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => RegisterPage()),
+        );
+      },
       child: Text(
           "Don't you have an account?",
           textAlign: TextAlign.center,
