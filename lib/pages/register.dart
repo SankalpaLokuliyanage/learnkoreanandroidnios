@@ -9,7 +9,11 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
 
+  TextEditingController full_nameController = TextEditingController();
   TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirm_passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +46,13 @@ class _RegisterPageState extends State<RegisterPage> {
             children: [
               _icon(),
               const SizedBox(height: 30),
+              _inputField("Full Name", full_nameController),
+              const SizedBox(height: 10),
               _inputField("Username", usernameController),
+              const SizedBox(height: 10),
+              _inputField("Password", passwordController, isPassword: true),
+              const SizedBox(height: 10),
+              _inputField("Confirm Password", confirm_passwordController, isPassword: true),
             ],
           ),
         ),
@@ -72,6 +82,40 @@ class _RegisterPageState extends State<RegisterPage> {
 
       );
   }
+
+  Widget _registerBtn() {
+    return ElevatedButton(
+      onPressed: () {},
+      child: const SizedBox(
+        width: double.infinity,
+        child: Text(
+          "Sign In",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        shape: const StadiumBorder(),
+        primary: Color.fromRGBO(0, 0, 0, 1),
+        onPrimary: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+      ),
+    );
+  }
+
+  Widget _toLoginPageText() {
+    return TextButton(
+      onPressed: () {},
+      child: Text(
+        "Already have an account?",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20, color: Colors.black),
+      ),
+
+    );
+  }
+
+
 
   Widget _inputField(String hintText, TextEditingController controller, {isPassword = false}) {
 
