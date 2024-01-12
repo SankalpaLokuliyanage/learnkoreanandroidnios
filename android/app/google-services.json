@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "855931428764",
+    "project_id": "learnkoreannewbie",
+    "storage_bucket": "learnkoreannewbie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855931428764:android:4b26503b42223072847259",
+        "android_client_info": {
+          "package_name": "com.example.newa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqbF13HvapKRxjZTNnCjDVqRND3sMMEqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
