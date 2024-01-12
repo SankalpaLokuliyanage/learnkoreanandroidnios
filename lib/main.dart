@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Learn 한국어",
-      home: RegisterPage(),
+      home: LoginPage(),
     );
   }
 }
