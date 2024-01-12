@@ -27,27 +27,30 @@ class _LoginPageState extends State<LoginPage> {
         ),),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        resizeToAvoidBottomInset: true, // Set this property to true
         body: _page(),
       ),
     );
   }
 
   Widget _page() {
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _icon(),
-            const SizedBox(height: 50),
-            _inputField("Username", usernameController),
-            const SizedBox(height: 20),
-            _inputField("Password", passwordController, isPassword: true),
-            const SizedBox(height: 50),
-            _loginBtn(),
-            _toRegisterPageText(),
-          ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(22.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _icon(),
+              const SizedBox(height: 30),
+              _inputField("Username", usernameController),
+              const SizedBox(height: 10),
+              _inputField("Password", passwordController, isPassword: true),
+              const SizedBox(height: 30),
+              _loginBtn(),
+              _toRegisterPageText(),
+            ],
+          ),
         ),
       ),
     );
@@ -124,5 +127,4 @@ class _LoginPageState extends State<LoginPage> {
       obscureText: isPassword,
     );
   }
-
 }
