@@ -46,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
             _inputField("Password", passwordController, isPassword: true),
             const SizedBox(height: 50),
             _loginBtn(),
+            _toRegisterPageText(),
           ],
         ),
       ),
@@ -89,6 +90,18 @@ class _LoginPageState extends State<LoginPage> {
       onPrimary: Colors.white,
       padding: const EdgeInsets.symmetric(vertical: 16),
     ),
+    );
+  }
+
+  Widget _toRegisterPageText() {
+    return TextButton(
+      onPressed: () {},
+      child: Text(
+          "Don't you have an account?",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, color: Colors.black),
+        ),
+
     );
   }
 
