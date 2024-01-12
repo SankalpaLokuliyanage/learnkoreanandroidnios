@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newa/pages/login.dart';
+import 'package:newa/pages/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Learn 한국어",
-      home: LoginPage(),
+      home: RegisterPage(),
     );
   }
 }
