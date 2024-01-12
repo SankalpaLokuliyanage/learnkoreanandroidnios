@@ -53,6 +53,9 @@ class _RegisterPageState extends State<RegisterPage> {
               _inputField("Password", passwordController, isPassword: true),
               const SizedBox(height: 10),
               _inputField("Confirm Password", confirm_passwordController, isPassword: true),
+              const SizedBox(height: 30),
+              _registerBtn(),
+              _toLoginPageText(),
             ],
           ),
         ),
@@ -89,7 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
       child: const SizedBox(
         width: double.infinity,
         child: Text(
-          "Sign In",
+          "Register",
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20),
         ),
